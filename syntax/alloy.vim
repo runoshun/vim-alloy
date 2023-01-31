@@ -11,8 +11,11 @@ syn keyword alloyKeyword open or pred run sum extends
 syn keyword alloyConstant univ iden
 syn keyword alloyOperator one lone all some no none disj not set
 
+" Temporal operators in Alloy 6+
+syn keyword alloyOperator always eventually after historically once before until steps
+
 syn keyword alloyKeyword   sig  nextgroup=alloySigDecl skipwhite skipnl
-syn match   alloySigDecl   /[A-Z][_0-9a-zA-Z']*/ contained nextgroup=alloyComma skipwhite skipnl
+syn match   alloySigDecl   /[A-Z][_0-9a-zA-Z'‘’]*/ contained nextgroup=alloyComma skipwhite skipnl
 syn match   alloyComma     /,/                   contained nextgroup=alloySigDecl skipwhite skipnl
 
 syn region alloyComment start="/\*" end="\*/"
