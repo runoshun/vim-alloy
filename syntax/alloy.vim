@@ -3,7 +3,7 @@ if exists("b:current_syntax")
 endif
 
 syn keyword alloyKeyword abstract and as assert
-syn keyword alloyKeyword but check else exactly enum
+syn keyword alloyKeyword but check else exactly exh exhaustive enum
 syn keyword alloyKeyword fact for fun module
 syn keyword alloyKeyword iff implies Int let in
 syn keyword alloyKeyword open or pred run sum extends
@@ -17,6 +17,11 @@ syn keyword alloyOperator always eventually after historically once before until
 syn keyword alloyKeyword   sig  nextgroup=alloySigDecl skipwhite skipnl
 syn match   alloySigDecl   /[A-Z][_0-9a-zA-Z'‘’]*/ contained nextgroup=alloyComma skipwhite skipnl
 syn match   alloyComma     /,/                   contained nextgroup=alloySigDecl skipwhite skipnl
+
+syn match alloyConstant "\v<0b[01_]+>"
+syn match alloyConstant "\v<0x([_]|([0-9A-Fa-f][0-9A-Fa-f]))+>"
+syn match alloyConstant "\v<[0-9][0-9_]*>"
+syn region alloyConstant start=/\v"/ skip=/\v\\./ end=/\v"/
 
 syn region alloyComment start="/\*" end="\*/"
 syn region alloyComment start="\-\-" end="\n"
