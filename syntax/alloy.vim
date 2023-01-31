@@ -14,6 +14,23 @@ syn keyword alloyOperator one lone all some no none disj not set
 " Temporal operators in Alloy 6+
 syn keyword alloyOperator always eventually after historically once before until steps
 
+syn match alloyOperator "!"
+syn match alloyOperator "#"
+syn match alloyOperator "&"
+syn match alloyOperator "*"
+syn match alloyOperator "+"
+syn match alloyOperator "/"
+syn match alloyOperator ":"
+syn match alloyOperator "^"
+syn match alloyOperator "~"
+syn match alloyOperator "|"
+syn match alloyOperator "="
+syn match alloyOperator ">"
+syn match alloyOperator "<"
+syn match alloyOperator "'"
+syn match alloyOperator "‘"
+syn match alloyOperator "’"
+
 syn keyword alloyKeyword   sig     nextgroup=alloyDecl skipwhite skipnl
 syn keyword alloyKeyword   fact    nextgroup=alloyDecl skipwhite skipnl
 syn keyword alloyKeyword   fun     nextgroup=alloyDecl skipwhite skipnl
