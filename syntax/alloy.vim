@@ -36,7 +36,7 @@ syn keyword alloyKeyword   fact    nextgroup=alloyDecl skipwhite skipnl
 syn keyword alloyKeyword   fun     nextgroup=alloyDecl skipwhite skipnl
 syn keyword alloyKeyword   pred    nextgroup=alloyDecl skipwhite skipnl
 syn keyword alloyKeyword   extends nextgroup=alloyDecl skipwhite skipnl
-syn match   alloyDecl   /[a-zA-Z][_0-9a-zA-Z']*/ contained nextgroup=alloyComma skipwhite skipnl
+syn match   alloyDecl   /[a-zA-Z][_0-9a-zA-Z"]*/ contained nextgroup=alloyComma skipwhite skipnl
 syn match   alloyComma  /,/                      contained nextgroup=alloyDecl skipwhite skipnl
 
 syn match alloyConstant "\v<0b[01_]+>"
